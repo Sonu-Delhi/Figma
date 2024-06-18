@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body{
+        background-color: ghostwhite;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 250px auto auto;
+        grid-template-rows: 100px 500px;
+        gap: 20px;
+      }
+      div {
+        border: 2px solid black;
+      }
+      .box1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /* padding: 40px; */
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.939);
+        border: none;
+        box-shadow: 1px -3px 0px 4px gainsboro;
+        display: flex;
+        gap: 50px;
+      }
+      .box2 {
+        position: absolute;
+        top: 51px;
+        height: 900px;
+        /* margin-top: 2px;   */
+        border: none;
+        background-color: #fff;
+      }
+      .box1 h3 {
+        color: blue;
+        font-family: sans-serif;
+      }
+      .box1 > .saas {
+        padding-top: 15px;
+        text-align: center;
+        height: 49px;
+        width: 237px;
+        border: 2px solid red;
+        background-color: white;
+        box-shadow: -3px -4px 0px 4px gainsboro;
+        border: none;
+      }
+      
+      .box2 .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 5px;
+        margin-left: 20px;
+        border: none;
+        /* background-color: red; */
+        border-radius: 50%;
+        background-image: url("/sonu.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .box2 .image{
+        border: none;
+        display: flex;
+        margin-top: 10px;
+      }
+      .content{
+        /* margin-top: 15px; */
+        height: 50px;
+        border: none;
+        /* text-align: center; */
+        /* width: 100px; */
+        font-size: 13px;
+        padding: 15px;
+        /* margin-top: 15px;
+        margin-left: 15px; */
+        font-family: sans-serif;
+      }
+      .content .para{
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content .para1{
+        color: gray;
+        padding-left: 2px;
+      }
+      .list{
+        border: none;
+        text-align: justify;
+        padding-top: 10px;
+        height: 400px;
+      }
+      .list ul li{
+        padding-top: 15px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-left: 30px;
+        text-decoration: none;
+        list-style: none;
+        /* text-align: center; */
+      }
+      .list ul li:nth-child(5){
+        color: blue;
+      }
+      .list .blue a{
+        color: blue;
+      }
+      .list ul li i{
+        padding-right: 15px;
+      }
+      .list ul li a{
+        text-decoration: none;
+        color: gray;
+      }
+      .search{
+        /* position: absolute; */
+        /* margin-left: 300px; */
+        display: flex;
+        /* top: 0; */
+        border: none;
+        align-items: center;
+        gap: 10px;
+        color: gray;
+      }
+      .box3 {
+        position: absolute;
+        margin-top: 10px;
+        top: 70px;
+        left: 270px;
+        width: 350px;
+        height: 820px;
+        border-radius: 3px;
+        background-color: #fff;
+        /* padding-top: 15px; */
+        /* padding-left: 20px;
+        padding-right: 20px; */
+        border: none;
+        /* background: green; */
+      }
+      .box4 {
+        position: absolute;
+        top: 70px;
+        left: 650px;
+        margin: 10px;
+        margin-right: 20px;
+        width: 680px;
+        height: 700px;
+        /* background-image: url("garph1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        border-radius: 5px;
+        border: none;
+        /* object-fit: cover; */
+        background-color: #ffffff;
+      }
+      .box31{
+        width: 100%;
+        height: 70px;
+        border: none;
+        box-shadow: 1px 1px 1px 0px gainsboro;
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .image1{
+        width: 100%;
+        height: 30px;
+        border: none;
+        display: flex;
+        /* align-items: center; */
+        gap: 10px;
+        
+      }
+      .image1 img{
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        outline: 2px aqua;
+      }
+      .image1 >.lindsay{
+        padding-top: 5px;
+        font-size: 12px;
+        color: blue;
+        font-weight: 700;
+
+      }
+      .nov26{
+        margin-left: 80px;
+        color: gray;
+        font-size: 11px;
+      }
+      .ideas{
+        font-size: 11px;
+        color: gray;
+        font-weight: 600;
+        padding-left: 40px;
+      }
+      .check1{
+        /* height: 15px;
+        width: 30px; */
+        color: #fff;
+        background-color: blue;
+        text-align: center;
+        padding: 4px 6px;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: 48px;
+       
+      }
+      .image1>.nicci{
+        color: black;
+      }
+      .check2{
+        background-color: #fff;
+        border: 1px solid red;
+        color: red;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 4px 8px;
+        border-radius: 5px;
+        margin-left: 45px;
+      }
+
+      .check3{
+        color: green;
+        /* background-color: blue; */
+        text-align: center;
+        /* padding: 4px 6px; */
+        font-size: 25px;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: 42px;
+      }
+      .check4{
+        margin-left: 100px;
+      }
+
+      .box41{
+        height: 60px;
+        width: 100%;
+        border: none;
+        padding: 20px;
+        box-shadow: 0px 1px 1px 0px gainsboro;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-weight: 600;
+      }
+      .box41 > img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+      .box42{
+        height: 7px;
+        width: 7px;
+        border: none;
+        background-color: rgb(19, 204, 19);
+        border-radius: 50%;
+      }
+      .icon{
+        margin-left: 405px;
+        font-size: 20px;
+        color: gray;
+      }
+      .box43{
+        border: none;
+        width: 80%;
+        padding-left: 20px;
+        height: 150px;
+        margin-top: 100px;
+      }
+      .box44{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        border: none;
+        padding-bottom: 5px;
+
+      }
+      .box44 >img{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+      }
+      .time{
+        color: gray;
+      }
+      .box45{
+        font-size: 15px;
+        padding: 8px;
+        text-align: justify;
+        background-color: blue;
+        color: #fff;
+        border: none;
+        border-radius: 0px 8px 8px 8px;
+
+      }
+      .box46{
+        border: none;
+        width: 80%;
+        padding-left: 20px;
+        /* padding-right: 20px; */
+        height: 150px;
+        margin-top: 50px;
+        margin-left: 110px;
+      }
+      .box47{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        border: none;
+        padding-left: 83%;
+        padding-bottom: 5px;
+        /* margin-left: 50%; */
+      }
+      .box47>img{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+      }
+      .box48{
+        font-size: 15px;
+        padding: 8px;
+        text-align: justify;
+        background-color: ghostwhite;
+        color: black;
+        border: none;
+        border-radius: 8px 0px 8px 8px;
+      }
+      .box49{
+        border: none;
+        width: 80%;
+        padding-left: 20px;
+        height: 150px;
+        margin-top: 50px;
+      }
+      </style>
+</head>
+<body>
+    <section>
+      <div class="box1">
+        <div class="saas">
+          <h3>Saas Kit</h3>
+        </div>
+        <div class="search">
+        <i class='bx bx-search'></i>
+        <p class="para9">Search by contact or message</p>
+      </div>
+        <!-- <div></div>
+            <div></div> -->
+      </div>
+      <div class="box2">
+        <div class="image">
+        <div class="logo">
+          <!-- <img src="" alt=""> -->
+        </div>
+
+        <div class="content">
+          <p class="para">Sonu Yadav</p>
+          <p class="para1">sonu12345@gmail.com</p>
+        </div>
+      </div>
+        <div class="list">
+          <ul>
+            <li><i class='bx bxs-dashboard'></i><a href="index.html">Dashboard</a></li>
+            <li><i class='bx bx-menu'></i><a href="">Tasks</a></li>
+            <li><i class='bx bx-envelope'></i><a href="index3.html">Email</a></li>
+            <li><i class='bx bxs-user'></i><a href="index4.html">Contacts</a></li>
+            <li class="blue"><i class='bx bx-message'></i><a href="index2.html">Chats</a></li>
+            <li><i class='bx bxs-barcode'></i><a href="index1.html">Deals</a></li>
+            <li><i class='bx bx-dots-horizontal-rounded'></i><a href="">Setting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box3">
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <span class="check1">1</span>
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Nicci <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas" style="color: gainsboro;">Nicci is typing a message...</span>
+            <span class="check1 check4">2</span>
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <span class="check3"><i class='bx bx-check-square'></i></span>
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <span class=" check2">!</span>
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+
+        <div class="box31">
+            <div class="image1">
+                <img src="/img.jpg" alt="">
+                <p class="lindsay nicci">Lindsay Stroud <span class="nov26">26 Nov 2023, 12:34</span></p>
+                
+            </div>
+            <span class="ideas">Your ideas for this application is nice!</span>
+            <!-- <span class="check1">1</span> -->
+        </div>
+      </div>
+      <div class="box4">
+        <div class="box41">
+          <img src="/img.jpg" alt="">
+          <p class="lindsay1">Lindsay Stroud</p>
+          <div class="box42"></div>
+          <span class="icon"><i class='bx bx-dots-vertical-rounded'></i></span>
+        </div>
+        <div class="box43">
+          <div class="box44">
+            <img src="/img.jpg" alt="">
+            <p class="lindsay2">Lindsay Stroud</p>
+            <span class="time">11:30</span>
+          </div>
+          <div class="box45">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non libero dolore et explicabo commodi soluta velit! Commodi ducimus, unde perspiciatis itaque eos neque, vero illum atque, omnis ipsa consequatur?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt unde temporibus eaque iusto fugit et adipisci exercitationem! Architecto ut possimus impedit numquam rerum labore rem eveniet dolorem, fugiat nobis maxime?</p>
+          </div>
+        </div>
+        <div class="box46">
+          <div class="box47">
+            <img src="/sonu.jpg" alt="">
+            <p class="lindsay2">You</p>
+            <span class="time">11:33</span>
+          </div>
+          <div class="box48">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non libero dolore et explicabo commodi soluta velit! Commodi ducimus, unde perspiciatis itaque eos neque, vero illum atque, omnis ipsa consequatur?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum dicta reprehenderit animi eaque qui similique debitis mollitia voluptatum impedit</p>
+          </div>
+        </div>
+
+        <div class="box49">
+          <div class="box44">
+            <img src="/img.jpg" alt="">
+            <p class="lindsay2">Lindsay Stroud</p>
+            <span class="time">11:35</span>
+          </div>
+          <div class="box45">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere non libero dolore et explicabo commodi soluta velit! Commodi ducimus, </p>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

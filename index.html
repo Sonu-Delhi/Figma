@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body{
+        background-color: ghostwhite;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 250px auto auto;
+        grid-template-rows: 100px 500px;
+        gap: 20px;
+      }
+      div {
+        border: 2px solid black;
+      }
+      .box1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /* padding: 40px; */
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0.939);
+        border: none;
+        box-shadow: 1px -3px 0px 4px gainsboro;
+        display: flex;
+        gap: 50px;
+      }
+      .box2 {
+        position: absolute;
+        top: 101px;
+        height: 900px;
+        /* margin-top: 2px;   */
+        border: none;
+        background-color: #fff;
+      }
+      .box4 {
+        position: absolute;
+        top: 120px;
+        left: 870px;
+        margin: 10px;
+        margin-right: 20px;
+        width: 450px;
+        height: 400px;
+        /* background-image: url("garph1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        border-radius: 5px;
+        border: none;
+        /* object-fit: cover; */
+        /* background-color: aqua; */
+      }
+      .box4 img{
+        width: 450px;
+        height: 400px;
+        border-radius: 5px;       
+      }
+      .box1 h3 {
+        color: blue;
+        font-family: sans-serif;
+      }
+      .box1 > .saas {
+        padding: 30px;
+        height: 99px;
+        width: 237px;
+        border: 2px solid red;
+        background-color: white;
+        box-shadow: -3px -4px 0px 4px gainsboro;
+        border: none;
+      }
+      
+      .box2 .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 5px;
+        margin-left: 20px;
+        /* background-color: red; */
+        border-radius: 50%;
+        background-image: url("/sonu.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+      }
+      .box2 .image{
+        border: none;
+        display: flex;
+        margin-top: 10px;
+      }
+      .content{
+        /* margin-top: 15px; */
+        height: 50px;
+        border: none;
+        /* text-align: center; */
+        /* width: 100px; */
+        font-size: 13px;
+        padding: 15px;
+        /* margin-top: 15px;
+        margin-left: 15px; */
+        font-family: sans-serif;
+      }
+      .content .para{
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content .para1{
+        color: gray;
+        padding-left: 2px;
+      }
+      .list{
+        border: none;
+        text-align: justify;
+        padding-top: 10px;
+        height: 400px;
+      }
+      .list ul li{
+        padding-top: 15px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-left: 30px;
+        text-decoration: none;
+        list-style: none;
+        /* text-align: center; */
+      }
+      .list ul li:nth-child(1){
+        color: blue;
+      }
+      .list .blue a{
+        color: blue;
+      }
+      .list ul li i{
+        padding-right: 15px;
+      }
+      .list ul li a{
+        text-decoration: none;
+        color: gray;
+      }
+      .box3 {
+        position: absolute;
+        margin-top: 10px;
+        top: 120px;
+        left: 270px;
+        width: 600px;
+        height: 820px;
+        border-radius: 3px;
+        background-color: #fff;
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        /* background: green; */
+      }
+      .div1{
+        display: flex;
+        justify-content: space-between;
+        border: none;
+      }
+      .para3{
+        color: gray;
+      }
+      .span2{
+        color: blue;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .box3 .div2{
+        width: 100%;
+        height: 4px;
+        border-radius: 20px;
+        border: none;
+        background-color: red;
+        background-image: linear-gradient(45deg,rgb(18, 226, 18) 70%,gray 30%);
+        margin-top: 10px;
+      }
+      .div3{
+        margin-top: 15px;
+        width: 100%;
+        height: 100px;
+        border: none;
+        position: relative;
+      }
+      .div3 h4{
+        border: none;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .div3 .div4{
+        margin-top: 20px;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        font-weight: 550;
+        border: none;
+        font-size: 13px;
+        color: gray;
+        /* margin-bottom: 0; */
+        
+      }
+
+      .div3 .div5{
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        margin-top: 20px;
+        display: flex;
+        text-align: center;
+        /* gap: 76px; */
+        justify-content: space-between;
+        font-weight: 550;
+        font-size: 13px;
+        color: gray;
+        border: none;
+        
+      }
+      /* .box3 .div5>p{
+        height: 25px;
+        /* width: 100px; */
+
+      
+      .box3 .div5 .para4{
+        /* padding: 5px; */
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: blue;
+        color: #fff;
+      }
+      .mon{
+        color: blue;
+      }
+      .div6{
+        width: 100%;
+        height: 150px;
+        margin-top: 10px;
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px -1px black;
+      }
+      
+      .div7>.para5{
+        display: inline-block;
+        font-size: 14px;
+        color: black;
+        font-weight: 600;
+        border: none;
+        /* justify-content: space-between; */
+      }
+      
+      .div7{
+        border: none;
+      }
+      .div7>.span3{
+        border: none;
+        /* text-align: right; */
+        margin-left: 50%;
+        color: gray;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .para6{
+        margin-top: 5px;
+        font-size: 11px;
+        color: gray;
+      }
+      .span4{
+        color: rgba(0, 0, 0, 0.754);
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .div8{
+      /* display: inline-block; */
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-image: url("img.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 50px;
+      }
+      .div9{
+        display: flex;
+        gap: 10px;
+        border: none;
+        /* margin-top: 50px; */
+      }
+      .para7{
+        margin-top: 60px;
+        font-size: 13px;
+        font-weight: 700;
+        color: gray;
+      }
+
+      .btn{
+        height: 30px;
+        border-radius: 7px;
+        border: none;
+        background-color: rgb(17, 188, 17);
+        color: #fff;
+        /* text-align: right; */
+        width: 100px;
+        padding: 5px;
+        margin-left: 53%;
+        margin-top: 50px;
+      }
+      .div7>.span31{
+        border: none;
+        /* text-align: right; */
+        margin-left: 60%;
+        color: gray;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .div7>.span32{
+        border: none;
+        /* text-align: right; */
+        margin-left: 70%;
+        color: gray;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .btn1{
+       height: 30px;
+       width: 180px;
+       gap: 5px;
+       margin-top: 53px;
+       margin-left: 200px;
+       align-items: center;
+        display: flex;
+        border: none;
+        
+      }
+      .btn2{
+        /* padding: 5px; */
+        width: 90px;
+        padding: 3px;
+        margin-left: 60px;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+      }
+      .orange{
+        color: orangered;
+        font-weight: 700;
+      }
+
+      .green{
+        color: green;
+        font-weight: 700;
+      }
+
+      .gray{
+        color: gray;
+        font-weight: 700;
+      }
+      .para8{
+        text-align: center;
+        margin-top: 100px;
+        font-weight: 700;
+        color: blue;
+      }
+      .box5{
+        width: 450px;
+        height: 400px;
+        position: absolute;
+        top: 550px;
+        left: 880px;
+        border-radius: 5px;
+        background-image: url("graph3.png");
+        background-size: contain;
+        border: none;
+      }
+      .search{
+        /* position: absolute; */
+        /* margin-left: 300px; */
+        display: flex;
+        /* top: 0; */
+        border: none;
+        align-items: center;
+        gap: 10px;
+        color: gray;
+      }
+      </style>
+  </head>
+  <body>
+    <section>
+      <div class="box1">
+        <div class="saas">
+          <h3>Saas Kit</h3>
+        </div>
+        <div class="search">
+        <i class='bx bx-search'></i>
+        <p class="para9">Global Search</p>
+      </div>
+        <!-- <div></div>
+            <div></div> -->
+      </div>
+      <div class="box2">
+        <div class="image">
+        <div class="logo">
+          <!-- <img src="" alt=""> -->
+        </div>
+
+        <div class="content">
+          <p class="para">Sonu Yadav</p>
+          <p class="para1">sonu12345@gmail.com</p>
+        </div>
+      </div>
+        <div class="list">
+          <ul>
+            <li class="blue"><i class='bx bxs-dashboard'></i><a href="index.html">Dashboard</a></li>
+            <li><i class='bx bx-menu'></i><a href="">Tasks</a></li>
+            <li><i class='bx bx-envelope'></i><a href="index3.html">Email</a></li>
+            <li><i class='bx bxs-user'></i><a href="index4.html">Contacts</a></li>
+            <li><i class='bx bx-message'></i><a href="index2.html">Chats</a></li>
+            <li><i class='bx bxs-barcode'></i><a href="index1.html">Deals</a></li>
+            <li><i class='bx bx-dots-horizontal-rounded'></i><a href="">Setting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box3">
+        <div class="div1">
+        <p class="para2">8 task complete out of 10</p>
+        <p class="para3">show: <span class="span2">This week</span></p>
+      </div>
+      <div class="div2"></div>
+      <div class="div3">
+        <h4>26 November, Sunday</h4>
+
+        <div class="div4">
+          <p>Sun</p>
+          <p class="mon">Mon</p>
+          <p>Tue</p>
+          <p>Wed</p>
+          <p>Thu</p>
+          <p>Fri</p>
+          <p>Sat</p>
+        </div>
+        <div class="div5">
+          <!-- <span>12</span> -->
+          <p class="para4">19</p>
+          <p class="mon">20</p>
+          <p>21</p>
+          <p>22</p>
+          <p>23</p>
+          <p>24</p>
+          <p>25</p>
+        </div>
+      </div>
+      <div class="div6">
+        <div class="div7">
+          <p class="para5">Sent benefit review by Sunday</p>
+          <span class="span3">reminder</span>
+          <p class="para6">Due Date: <span class="span4">November 19,2023</span></p>
+          <div class="div9">
+          <div class="div8"></div>
+          <p class="para7">George Fields</p>
+          <button class="btn">Complete</button>
+          </div>
+        </div>
+      </div>
+
+       <div class="div6">
+        <div class="div7">
+          <p class="para5">Invite to office meet-up</p>
+          <span class="span31">Call</span>
+          <p class="para6">Due Date: <span class="span4">November 19,2023</span></p>
+          <div class="div9">
+          <div class="div8"></div>
+          <p class="para7">Rebecca Moore</p>
+          <div class="btn1">
+            <i class='bx bx-circle orange'></i>
+            <i class='bx bx-circle green'></i>
+            <i class='bx bxs-pencil gray'></i>
+            <i class='bx bxs-trash-alt gray'></i>
+          <button class="btn2">Complete</button>
+        </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="div6">
+        <div class="div7">
+          <p class="para5">office meet-up</p>
+          <span class="span32">Event</span>
+          <p class="para6">Due Date: <span class="span4">November 19,2023</span></p>
+          <div class="div9">
+          <div class="div8"></div>
+          <p class="para7">Lindsey Stroud</p>
+          <button class="btn">Complete</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      <p class="para8">Show more</p>
+    </div>
+      <div class="box4">
+      <img src="/garph1.jpg" alt=""></div>
+
+      <div class="box5"></div>
+    </section>
+  </body>
+</html>

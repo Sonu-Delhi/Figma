@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body{
+        background-color: ghostwhite;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 250px auto auto;
+        grid-template-rows: 100px 500px;
+        gap: 20px;
+      }
+      /* div {
+        border: 2px solid black;
+      } */
+      .box1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        /* padding: 40px; */
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.939);
+        border: none;
+        box-shadow: 1px -3px 0px 4px gainsboro;
+        display: flex;
+        gap: 50px;
+      }
+      .box2 {
+        position: absolute;
+        top: 51px;
+        height: 900px;
+        /* margin-top: 2px;   */
+        border: none;
+        background-color: #fff;
+      }
+      .box1 h3 {
+        color: blue;
+        font-family: sans-serif;
+      }
+      .box1 > .saas {
+        padding-top: 15px;
+        text-align: center;
+        height: 49px;
+        width: 237px;
+        border: 2px solid red;
+        background-color: white;
+        box-shadow: -3px -4px 0px 4px gainsboro;
+        border: none;
+      }
+      
+      .box2 .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 5px;
+        margin-left: 20px;
+        /* background-color: red; */
+        border-radius: 50%;
+        background-image: url("/sonu.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .box2 .image{
+        border: none;
+        display: flex;
+        margin-top: 10px;
+      }
+      .content{
+        /* margin-top: 15px; */
+        height: 50px;
+        border: none;
+        /* text-align: center; */
+        /* width: 100px; */
+        font-size: 13px;
+        padding: 15px;
+        /* margin-top: 15px;
+        margin-left: 15px; */
+        font-family: sans-serif;
+      }
+      .content .para{
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .content .para1{
+        color: gray;
+        padding-left: 2px;
+      }
+      .list{
+        border: none;
+        text-align: justify;
+        padding-top: 10px;
+        height: 400px;
+      }
+      .list ul li{
+        padding-top: 15px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-left: 30px;
+        text-decoration: none;
+        list-style: none;
+        /* text-align: center; */
+      }
+      .list ul li:nth-child(4){
+        color: blue;
+      }
+      .list .blue a{
+        color: blue;
+      }
+      .list ul li i{
+        padding-right: 15px;
+      }
+      .list ul li a{
+        text-decoration: none;
+        color: gray;
+      }
+      .search{
+        /* position: absolute; */
+        /* margin-left: 300px; */
+        display: flex;
+        /* top: 0; */
+        border: none;
+        align-items: center;
+        gap: 10px;
+        color: gray;
+      }
+      .box3{
+        border: none;
+        height: 500px;
+        width: 76%;
+        position: absolute;
+        left: 290px;
+        top: 100px;
+        padding: 10px;
+        /* background-color: #fff;
+        border-radius: 5px; */
+      }
+      .btn{
+        width: 130px;
+        height: 30px;
+        margin-left: 86%;
+        background-color: rgb(0, 98, 255);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 10px -2px rgb(0, 98, 255);
+      }
+      .para2{
+        font-size: 13px;
+        font-weight: 600;
+        color: gray;
+        padding-bottom: 5px;
+      }
+      .span1{
+        color: rgb(0, 98, 255);
+      }
+      .box31{
+        border: none;
+        width: 100%;
+        height: 790px;
+        background-color: #fff;
+        border-radius: 5px;
+        /* padding: 10px; */
+        /* display: flex; */
+        /* padding-left: 10px;
+        padding-right: 10px; */
+
+      }
+      .box32{
+        height: 40px;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 600;
+        color: gray;
+        border: none;
+        box-shadow: 1px 2px 0px -1px gray;
+        
+      }
+      .box32>ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        gap: 100px;
+        padding-right: 10px;
+        /* padding-left: 10px; */
+        
+      }
+      .box33{
+        display: flex;
+        border: none;
+        gap: 10px;
+        /* justify-content: center; */
+        text-align: center;
+      }
+      .box33>i{
+        font-size: 30px;
+      }
+      .name{
+        padding-top: 7px;
+      }
+      
+      .box34{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        gap: 35px;
+        align-items: center;
+        /* padding-left: 10px; */
+        box-shadow: 1px 2px 0px -1px gray;
+      }
+      .box35{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .box35>img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        
+      }
+      .box35>i{
+        font-size: 30px;
+        color: gray;
+      }
+      .box35>.lind{
+        font-size: 13px;
+        font-weight: 700;
+        color: gray;
+      }
+      .box36{
+        width: 81%;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: gray;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .box36>.mana{
+        margin-left: 175px;
+      }
+      .box36>.pras{
+        margin-left: 100px;
+      }
+      .box36>.minu{
+        margin-left: 100px;
+      }
+      .box33{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .box331{
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        color: #fff;
+        border-radius: 5px;
+      }
+      .box33>i{
+        font-size: 20px;
+      }
+
+      .box35>.squa{
+        color: blue;
+      }
+      .boxi{
+        background-color: rgba(135, 207, 235, 0.526);
+      }
+      
+
+      
+
+      
+      
+      
+      </style>
+</head>
+<body>
+    <section>
+      <div class="box1">
+        <div class="saas">
+          <h3>Saas Kit</h3>
+        </div>
+        <div class="search">
+        <i class='bx bx-search'></i>
+        <p class="para9">Search by contact or message</p>
+      </div>
+        <!-- <div></div>
+            <div></div> -->
+      </div>
+      <div class="box2">
+        <div class="image">
+        <div class="logo">
+          <!-- <img src="" alt=""> -->
+        </div>
+
+        <div class="content">
+          <p class="para">Sonu Yadav</p>
+          <p class="para1">sonu12345@gmail.com</p>
+        </div>
+      </div>
+        <div class="list">
+          <ul>
+            <li><i class='bx bxs-dashboard'></i><a href="index.html">Dashboard</a></li>
+            <li><i class='bx bx-menu'></i><a href="">Tasks</a></li>
+            <li><i class='bx bx-envelope'></i><a href="index3.html">Email</a></li>
+            <li class="blue"><i class='bx bxs-user'></i><a href="index4.html">Contacts</a></li>
+            <li><i class='bx bx-message'></i><a href="index2.html">Chats</a></li>
+            <li><i class='bx bxs-barcode'></i><a href="index1.html">Deals</a></li>
+            <li><i class='bx bx-dots-horizontal-rounded'></i><a href="">Setting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box3">
+        <button class="btn">Add contact</button>
+        <p class="para2">Company: <span class="span1">All</span> <i class='bx bx-caret-down'></i></p>
+        <div class="box31">
+            <div class="box32">
+                <ul>
+                    <div class="box33">
+                    <div class="box331">1</div>
+                    <span class="secl">1 select</span>
+                    <i class='bx bxs-trash-alt iot'></i>
+                </div>
+                    
+                </ul>
+            
+        </div>
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">50%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34 boxi">
+              <div class="box35">
+                <i class='bx bxs-check-square squa'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Engineer</span>
+                <span class="email pras">80%</span>
+                <span class="email minu">10 minutes ago</span>
+              </div>
+            </div>
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">20 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+
+            <div class="box34">
+              <div class="box35">
+                <i class='bx bx-checkbox'></i>
+                <img src="/img.jpg" alt="">
+                <span class="lind">Lindsay St</span>
+              </div>
+              <div class="box36">
+                <span class="email">lindsay12@gmail.com</span>
+                <span class="email">Slack</span>
+                <span class="email mana">Manager</span>
+                <span class="email pras">70%</span>
+                <span class="email minu">14 minutes ago</span>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </section>
+</body>
+</html>
